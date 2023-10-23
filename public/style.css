@@ -1,0 +1,129 @@
+body{
+    background-color:#23241f;
+    margin: 0;
+}
+
+.wrapper{
+    display: flex;  
+    /* diaply flex because everything should be shown side by side  */
+    padding: 1rem  0.5rem;
+    /* this gives padding from top and side  */
+    font-size: 1rem;
+    /* everything is of same font size (rem is relative ) search onb gpt  */
+}
+
+pre{
+    margin: 0;
+    /* this is used to remove default margin */
+}
+
+#first_view{
+    padding-top: 0;
+    padding-bottom: 0;
+    /* this padding top and botoom is done to 0 so that the line comes inclined with , divsion of line no  */
+}
+
+.one_line_div{
+    color: rgb(230, 217, 217);
+    font-family: monospace;
+    text-align: end;
+    
+}
+
+textarea{
+    background-color: #23241f;
+    resize: none;
+    /* so that can't resize the textarea */
+    width: 100%;
+    padding: 0;
+    margin-left: 1rem;
+    min-height: calc(100vh - 2rem);
+    /* by writing 100vh it slider comes in because , we have given the padding of 1rem in top and botoom  */
+    color: aliceblue;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+
+}
+
+.buttons-wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.15;
+    transition: opacity 200ms  ease-in-out;
+    /* transition is given to opacity property whwich occcur in 200ms and ease andd out mean , jaise hi in transition on  */
+    background-color: #abafa1;
+    padding: 2rem;
+    
+}
+.buttons-wrapper:hover{
+    opacity: 1;
+}
+
+.head{
+   font-size: 3rem; 
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   width: 100%;
+   display: inline-block;
+   /* dipslay inline-block, block,inline have difernt property read from W3 school */
+   /*in this case dipaly in line block is used show that it use 100% width   */
+}
+
+.head:hover{
+    text-decoration: underline;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.buttons > * + * {
+    margin-left: 0.5rem;
+}
+
+/* this .buttons > * + * line means that any direct child to the buttons class should have 0.5rem margin left space */
+
+.btn{
+    cursor: pointer;
+    background-color: #abafa1;
+    border: 1px solid #23241f;
+    color: #23241f;
+    border-radius: 0.25rem;
+    padding: 0.25rem  .5rem;
+    transition: background-color 200ms ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #696c5c;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+      
+    }
+  
+    textarea {
+      margin-left: 0; /* Reset margin for textarea */
+    }
+  
+    .btn {
+      margin-top: 0.5rem; /* Add margin to buttons */
+    }
+.buttons-wrapper{
+    position: relative;
+     opacity: 1;
+  }
+  
+.one_line_div{
+    text-align: inherit;
+    position: absolute;
+}
+}
