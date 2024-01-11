@@ -23,7 +23,9 @@ const savedbin =require("./model/schema")
 app.get("/",(req,res)=>{
     let instruction =`Welcome to SavedBin 
 A place where you can paste your code snippet and share them with your colleague for modification or reviewing 
-To start working , click on the New button on top right corner then paste your code , save and share with the URL link `
+To start working , click on the New button on top right corner then paste your code , save and share with the URL link 
+
+It is an open-souce project https://github.com/atul262002/savedbin/ feel free to contribute to add more Functionality `
 
       res.render("first_view" ,{instruction , language:"plaintext"})
 })
